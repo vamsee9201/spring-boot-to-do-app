@@ -2,9 +2,13 @@ package rest;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-
-@GetMapping("/helloworld")
+@Component
+@RestController
 public class home {
-    return "hello world!";
+    @GetMapping("/helloworld")
+    public String helloWorld() {
+        return "hello world!";
+    }
 }
